@@ -72,7 +72,10 @@ body {
 .button:hover {
   background: var(--base-color-alt);
 }
-
+.myIcon {
+  color: var(--base-color);
+  width: 120px;
+}
 .divider-1 {
   height: 1px;
   background: linear-gradient(
@@ -278,6 +281,7 @@ nav.show div.icon-close {
 
 #home .image {
   position: relative;
+  
 }
 
 #home .image::before {
@@ -352,10 +356,47 @@ nav.show div.icon-close {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+/*====  ABOUT ============================ */
+#impacto {
+  background: white;
+}
 
+#impacto .container {
+  margin: 0;
+}
+
+#impacto .image {
+  position: relative;
+}
+
+#impacto .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -8.3%;
+  right: -33%;
+  z-index: 0;
+}
+
+#impacto .image img {
+  position: relative;
+}
+
+#impacto .image img,
+#impacto .image::before {
+  border-radius: 0.25rem;
+}
+
+#impacto .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
 /*====  SERVICES ============================ */
 .cards.grid {
-  gap: 1.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card {
@@ -380,21 +421,21 @@ nav.show div.icon-close {
 
 /*====  testimonials ============================ */
 
-#testimonials {
+.cc {
   background: white;
 }
 
-#testimonials blockquote {
+.cc blockquote {
   padding: 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0.25rem;
 }
-#testimonials p {
+.cc p {
   position: relative;
-  text-indent: 1.875rem;
+  
   color: var(--title-color);
 }
-#testimonials p span {
+.cc p span {
   font: 700 3rem serif;
   position: absolute;
   left: -1.875rem;
@@ -402,24 +443,24 @@ nav.show div.icon-close {
   color: var(--base-color);
 }
 
-#testimonials cite {
+.cc cite {
   display: flex;
   align-items: center;
   font-style: normal;
   color: var(--text-color);
   margin-top: 2rem;
 }
-#testimonial .container {
+.cc .container {
   margin-left: 0rem;
   margin-right: 0rem;
 }
-#testimonials header {
+.cc header {
   margin-bottom: 0rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
-#testimonials cite img {
+.cc cite img {
   width: 2rem;
   height: 2rem;
   object-fit: cover;
@@ -546,13 +587,13 @@ footer .social a:hover {
   }
 
   .section header,
-  #testimonials header {
+  .cc header {
     max-width: 32rem;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
-  #testimonials .container {
+  .cc .container {
     margin-left: auto;
     margin-right: auto;
   }
@@ -602,7 +643,16 @@ footer .social a:hover {
   #about .image {
     margin-left: -7rem;
   }
-
+  #impacto .container {
+    grid-auto-flow: column;
+    margin: 0 auto;
+  }
+  #impacto .text {
+    margin-left: 0;
+  }
+  #impacto .image {
+    margin-right: -7rem;
+  }
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
